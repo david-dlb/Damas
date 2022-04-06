@@ -444,8 +444,6 @@ class Damas{
             }
         }
         this.hayPerdedor();
-        document.getElementById("cant-rojas").innerHTML = '<h1>Rojas :</h1> <br> <h2>Peones : ' + this.rojaPeon + '</h2><h2>Damas : ' + this.rojaDama + '</h2>'
-        document.getElementById("cant-blancas").innerHTML = '<h1>Blancas :</h1> <br> <h2>Peones : ' + this.blancaPeon + '</h2><h2>Damas : ' + this.blancaDama + '</h2>'
     }
 
     hayPerdedor(){

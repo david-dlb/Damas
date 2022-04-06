@@ -1,149 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
-    <title>Damas</title>
+    <title>Document</title>
 </head>
-<body >
-    
-    <h1 style="text-align: center; margin: 20px; font-size: 40pt; color: rgb(94, 6, 6);">Damas</h1>
-    <div class="options">
 
-        <h1 id="tiempo" style="padding-right: 30px;">0:00</h1>
-        <div style="padding-right: 30px;display: flex;">
-            <h1 style="margin-right: 5px;">Turno : </h1>
-            <h1 id="turno"></h1>
+<body>
+    <h1 style="text-align: center; margin: 20px; font-size: 40pt; color: rgb(94, 6, 6);">Damas</h1>
+    <div class="options m-1 p-2 mb-4 row">
+
+        <div class="col-12 col-md-8 row ">
+            <h1 class="col-4" id="tiempo" style="padding-right: 30px;">0:00</h1>
+            <div class="col-8 " style="padding-right: 30px;display: flex;">
+                <h2 style="margin-right: 5px;">Turno : </h2>
+                <h2 id="turno"></h2>
+            </div>
+
         </div>
-        <img src="images/reiniciar.png" alt="" id="reinicio">
-        <img src="images/pausa.png" alt="" id="pausa">
-        <button id="rendirse"><h3>Rendirse</h3></button>
+        <div class="col-12 col-md-4 d-flex justify-content-evenly">
+
+            <div class="">
+                <img src="images/reiniciar.png" alt="" id="reinicio" class="img-fluid">
+            </div>
+            <div class="">
+                <img src="images/pausa.png" alt="" id="pausa" class="img-fluid">
+            </div>
+            <div class="">
+                <button id="rendirse" class="btn btn-danger ms-2">Rendirse</button>
+            </div>
+        </div>
     </div>
 
     <div id="ganador"></div>
 
     <div id="div-pausa"></div>
 
-    <div style="display: flex; justify-content: center;">
-        <div id="cant-blancas">
-            <h2>Blancas :</h2>
-            <br>
-            <h3>Peones :</h3>
-            <h3>Damas :</h3>
-        </div>
-        <div id=" ">
-            
-            <div class="row">
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-            </div>
-            <div class="row">
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-            </div><div class="row">
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-            </div>
-            <div class="row">
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-            </div><div class="row">
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-            </div>
-            <div class="row">
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-            </div><div class="row">
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-            </div>
-            <div class="row">
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-                <button class="field-b b"></button>
-                <button class="field-w b"></button>
-            </div>
-        </div>
-        <div id="cant-rojas">
-            <h2>Rojas :</h2>
-            <br>
-            <h>Peones :</h>
-            <h2>Damas :</h2>
-        </div>
-    </div>
-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
-vscode://vscode.github-authentication/did-authenticate?windowid=3&code=7780a40c06ba075e2a8e&state=e26f4dd4-1f40-4997-8b3c-d145f863c299
-    <!-- Footer -->
-    <div class="container">
-        <footer class="py-5"> 
 
-            <div class="d-flex justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#twitter" />
-                            </svg></a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#instagram" />
-                            </svg></a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#facebook" />
-                            </svg></a></li>
-                </ul>
+    <div class=" m-4">
+
+        <div class="">
+
+            <div class="row justify-content-center m-1">
+
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
             </div>
-        </footer>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+            </div>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+            </div>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+            </div>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+            </div>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+            </div>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+            </div>
+            <div class="row justify-content-center m-1">
+
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+                <div class="col b ">
+
+                </div>
+                <div class="col b field-w">
+
+                </div>
+            </div>
+        </div>
     </div>
- 
+
 
     <script src="ColorBack.js"></script>
     <script src="Ficha.js"></script>
@@ -152,4 +272,5 @@ vscode://vscode.github-authentication/did-authenticate?windowid=3&code=7780a40c0
     <script src="MovimientoIA.js"></script>
     <script src="Damas.js"></script>
 </body>
+
 </html>

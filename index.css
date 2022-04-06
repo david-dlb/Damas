@@ -8,11 +8,12 @@ body{
     background: url("images/app_background.webp") rgb(31, 22, 114); 
 }
 .options{
-    display: flex; 
-    justify-content: center;
     background:  sienna;
-    margin: 10px;
-    padding: 10px;
+}
+.b{
+    height: 6vh;
+    background-size: cover;
+    background-repeat: round;
 }
 
 #container{
@@ -22,31 +23,10 @@ body{
     background: rgba(28, 2, 77, 0.733);
     width: 400px;
 }
-.row{
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.field-b{
-    width: 50px;
-    height: 50px;
-    background: saddlebrown;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.field-w{
-    width: 50px;
-    height: 50px;
-    background: rgb(236, 222, 222); 
-    transition: all 0.1s ease-in-out;
-}
 
 img{
     width: 43px;
-    height: 43px;
-    background: url("images/RojaPeon.png"); 
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 43px; 
 }
 
 #rendirse{
@@ -75,13 +55,11 @@ img{
     height: 70%;
     display: none;
     position: absolute;
-}
+} 
 
-#cant-blancas{
-    color: goldenrod;
-    margin: 30px;
-}
-#cant-rojas{
-    color: rgb(255, 72, 0);
-    margin: 30px;
+
+@media (min-width: 800px){
+    .b{
+        height: 9vh;
+    }
 }
