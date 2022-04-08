@@ -6,6 +6,7 @@
 }
 body{
     background: url("images/app_background.webp") rgb(31, 22, 114); 
+    background-color: linear-gradient(#4b2a00, #7e3e02);
 }
 .options{
     background:  sienna;
